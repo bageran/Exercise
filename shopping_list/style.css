@@ -1,0 +1,69 @@
+@font-face { font-family: 'TmoneyRoundWindExtraBold'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/TmoneyRoundWindExtraBold.woff') format('woff'); font-weight: normal; font-style: normal; }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'TmoneyRoundWindExtraBold';
+    background-color: #f1f1f1;
+    color: #333;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrap {
+    background-color: white;
+    width: 460px;
+    margin: auto;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+
+}
+
+header {
+    /* text-align: center; */
+    padding: 24px;
+    font-size: 2em;
+    font-weight: bold;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.shopping-list {
+    height: 360px;
+}
+
+ul li {
+    list-style: none;
+    padding: 24px;
+    font-size: 1.2em;
+}
+
+#item-input {
+    display: block;
+    width: 100%;
+    background-color: #FEFFD6;
+    border: none;
+    padding: 24px;
+    font-size: 1.2em;
+    color: #333;
+    font-family: 'TmoneyRoundWindExtraBold';
+}
+
+#save-btn {
+    display: block;
+    width: 100%;
+    background-color:  yellow;
+    color: #333;
+    font-size: 1.5em;
+    border: none;
+    padding: 18px;
+    font-weight: bold;
+    font-family: 'TmoneyRoundWindExtraBold';
+    border-radius: 0 0 10px 10px;
+}
