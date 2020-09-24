@@ -10,19 +10,46 @@ function calcNow() {
     const nowResult = nowPrice * nowQuantity;
     console.log(nowResult);
     // 4. 결과값이 보여진다.
-    document.querySelector('.now__total').value = nowResult;
-
+    const nowTotal = document.querySelector('.now__total');
+    nowTotal.value = nowResult;
+    if (isNaN(nowTotal.value) == true) {
+        nowTotal.value = '';
+    }
+ 
     // --- 추가 매수 --- //
     const addPrice = parseInt(document.querySelector('.add__price').value);
     const addQunatity = parseInt(document.querySelector('.add__quantity').value);
     const addResult = addPrice * addQunatity;
-    document.querySelector('.add__total').value = addResult;
+    console.log(addResult);
+    const addTotal = document.querySelector('.add__total');
+    addTotal.value = addResult;
+    if (isNaN(addTotal.value) == true) {
+        addTotal.value = '';
+    }
 
-    // --- 최종 결과 --- //
-    document.querySelector('.result__price').value = (nowResult + addResult) / (nowQuantity + addQunatity);
-    document.querySelector('.result__quantity').value = nowQuantity + addQunatity;
-    document.querySelector('.result__total').value = nowResult + addResult;
+    // --- 최종 보유 --- //
+    // ---- 최종 평단 ---- //
+    const priceAverage = (nowResult + addResult) / (nowQuantity + addQunatity);
+    console.log(priceAverage);
+    const resultPrice = document.querySelector('.result__price');
+    resultPrice.value = priceAverage;
+    if (isNaN(resultPrice.value) == true) {
+        resultPrice.value = '';
+    }
+    // ---- 최종 수량 ---- //
+    quantityAverage = nowQuantity + addQunatity;
+    console.log(quantityAverage);
+    const resultQuantity = document.querySelector('.result__quantity');
+    resultQuantity.value = quantityAverage;
+    if (isNaN(resultQuantity.value) == true) {
+        resultQuantity.value = '';
+    }
+    // ---- 최종 매수 총액 ---- //
+    const totalAverage = nowResult + addResult;
+    console.log(totalAverage);
+    const resultTotal = document.querySelector('.result__total');
+    resultTotal.value = totalAverage;
+    if (isNaN(resultTotal.value) == true) {
+        resultTotal.value = '';
+    }
 }
-
-// calcNow();
-
