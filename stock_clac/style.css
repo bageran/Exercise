@@ -68,6 +68,10 @@ h3 {
     gap: 24px;
 }
 
+.result__price, .result__quantity, .result__total {
+    color: #0589FF;
+}
+
 input {
     height: 36px;
     width: 180px;
@@ -78,7 +82,50 @@ input {
     border-radius: 4px;
 }
 
+input:focus {
+    outline: none;
+}
+
 .result {
     background: rgba(0,158,238,0.1);
     border-radius: 0 0 10px 10px;
+}
+
+/* 모바일 사이즈 */
+@media screen and (max-width: 768px) {
+    body {
+        width: 100%;
+        height: 100%;
+    }
+
+    .wrap {
+        background-color: white;
+        width: 100%;
+    }
+
+    header {
+        border-radius: 0;
+    }
+
+    .now__input, .add__input, .result__input {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 0;
+    }
+
+    input {
+        height: 44px;
+        width: 95%;
+        font-size: 1rem;
+        font-family: 'TmoneyRoundWindExtraBold';
+        border: 1px solid #ccc;
+        text-align: center;
+        border-radius: 4px;
+    }
+
+    .result {
+        border-radius: 0 0 0 0;
+    }
+    
 }
