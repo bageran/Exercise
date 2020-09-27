@@ -122,6 +122,18 @@ input:focus {
         gap: 8px;
     }
 
+    .now__input > div:nth-child(2) {
+        margin: 8px 0;
+    }
+    
+    .add__input > div:nth-child(2) {
+        margin: 8px 0;
+    }
+    
+    .result__input > div:nth-child(2) {
+        margin: 8px 0;
+    }
+
     input {
         height: 44px;
         width: 90%;
