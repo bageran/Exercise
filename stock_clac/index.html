@@ -17,9 +17,9 @@
             <div class="now">
                 <h3>현재 보유</h3>
                 <div class="now__input">
-                    <div class="price"><input type="text" class="now__price" placeholder="평균 매입가" onKeyUp=calcNow();> 원</div>
+                    <div class="price"><input type="text" class="now__price" placeholder="평균 매입가" onKeyUp="calcNow();"> 원</div>
                     <div class="quantity"><input type="text" class="now__quantity" placeholder="보유 수량" onKeyUp=calcNow();> 주</div>
-                    <div class="total"><input type="text" class="now__total"> 원</div>
+                    <div class="total"><input type="text" class="now__total" readonly/> 원</div>
                 </div>
             </div>
             <div class="divider"></div>
@@ -28,15 +28,15 @@
                 <div class="add__input">
                     <div class="price"><input type="text" class="add__price" placeholder="추가 매입가" onKeyUp=calcNow();> 원</div>
                     <div class="quantity"><input type="text" class="add__quantity" placeholder="추가 수량" onKeyUp=calcNow();> 주</div>
-                    <div class="total"><input type="text" class="add__total"> 원</div>
+                    <div class="total"><input type="text" class="add__total" readonly/> 원</div>
                 </div>
             </div>
             <div class="result">
                 <h3>최종 보유</h3>
                 <div class="result__input">
-                    <div class="price"><input type="text" class="result__price" placeholder="최종 평단" onKeyUp=calcNow();> 원</div>
-                    <div class="quantity"><input type="text" class="result__quantity" placeholder="최종 수량" onKeyUp=calcNow();> 주</div>
-                    <div class="total"><input type="text" class="result__total" onKeyUp=calcNow();> 원</div>
+                    <div class="price"><input type="text" class="result__price" placeholder="최종 평단" onKeyUp=calcNow(); readonly/> 원</div>
+                    <div class="quantity"><input type="text" class="result__quantity" placeholder="최종 수량" onKeyUp=calcNow(); readonly/> 주</div>
+                    <div class="total"><input type="text" class="result__total" onKeyUp=calcNow(); readonly/> 원</div>
                 </div>
             </div>
         </div>
