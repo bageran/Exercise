@@ -32,7 +32,7 @@ function calcNow() {
     const priceAverage = (nowResult + addResult) / (nowQuantity + addQunatity);
     console.log(priceAverage);
     const resultPrice = document.querySelector('.result__price');
-    resultPrice.value = priceAverage;
+    resultPrice.value = Math.floor(priceAverage);
     if (isNaN(resultPrice.value) == true) {
         resultPrice.value = '';
     }
@@ -52,4 +52,8 @@ function calcNow() {
     if (isNaN(resultTotal.value) == true) {
         resultTotal.value = '';
     }
+}
+
+function numberWithCommas(value) {
+    return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
