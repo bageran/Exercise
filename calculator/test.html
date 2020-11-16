@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input,
+        button {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input {
+            width: 50vw;
+            height: 50vh;
+        }
+    </style>
+
+</head>
+<body>
+    <input class="input" readonly />
+    <button class="btn" data-info="1">들어가라 글자</button>
+    <button class="btn2" data-info="2">들어가라 글자2</button>
+    <button class="btn-delete">삭제</button>
+
+<!-- JS start-->
+    <script>
+        const input = document.querySelector('.input');
+        const btn = document.querySelector('.btn');
+        const btn2 = document.querySelector('.btn2');
+        const btnDelete = document.querySelector('.btn-delete');
+
+        btn.addEventListener("click", () => {
+            // input.value = "";
+            const btnText = btn.dataset.info;
+            input.value += btnText;
+        });
+
+        btn2.addEventListener("click", () => {
+            // input.value = "";
+            const btnText2 = btn2.dataset.info;
+            input.value += btnText2;
+        });
+
+        btnDelete.addEventListener("click",() => {
+            let num = input.value;
+            input.value = num.slice(0,-1);
+        })
+    </script>
+<!-- JS end-->
+
+    <script>
+        class Counter {
+            constructor(runEveryFiveTimes) {
+                this.counter = 0;
+                this.callback = runEveryFiveTimes;
+            }
+
+            increase() {
+                this.counter++;
+                console.log(this.counter);
+                if (this.counter % 5 === 0) {
+                    this.callback && this.callback(this.counter);
+                }
+            }
+        }
+
+        function printSomething(num) {
+            console.log(`Yo! ${num}`);
+        }
+
+        const coolCounter = new Counter(printSomething);
+        coolCounter.increase();
+        coolCounter.increase();
+        coolCounter.increase();
+        coolCounter.increase();
+        coolCounter.increase();
+        coolCounter.increase();
+        coolCounter.increase();
+        coolCounter.increase();
+        coolCounter.increase();
+        coolCounter.increase();
+    </script>
+
+</body>
+</html>
