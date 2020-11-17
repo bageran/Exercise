@@ -56,9 +56,10 @@ num9.addEventListener("click", () => {
 });
 
 const num0 = document.querySelector('[data-info="0"]');
-num0.addEventListener("click", () => {
+num0.addEventListener("click", (e) => {
     let num0Text = num0.dataset.info;
     input.value += num0Text;
+    console.log(e);
 });
 
 const dot = document.querySelector('[data-info="."]');
@@ -78,13 +79,18 @@ allClear.addEventListener("click", () => {
     // input.value = "0";
 });
 
-
 const clear = document.querySelector('[data-operator="C"]');
 clear.addEventListener("click", () => {
     input.value = (input.value).slice(0,-1);
 });
 
 const percent = document.querySelector('[data-operator="%"]');
+percent.addEventListener("click", (e) => {
+    input.value = parseFloat(input.value) * 0.01;
+    console.log(input.value);
+    console.log(e);
+})
+
 const divide = document.querySelector('[data-operator="/"]');
 const multiple = document.querySelector('[data-operator="x"]');
 const minus = document.querySelector('[data-operator="-"]');
